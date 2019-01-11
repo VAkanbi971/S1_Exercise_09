@@ -39,6 +39,7 @@
             </ul>
         </nav>
     </header>
+
     <section>
         <h1>Customer Survey</h1>
         <p>Thank you for taking our customer survey. Your response
@@ -55,7 +56,6 @@
         <p>Required values are marked by an asterisk (*)</p>
 
         <!-- survey 1 -->
-        </form>
         <form id="survey" action="http://www.eample.com/redball/survey" method="POST">
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
@@ -111,9 +111,31 @@
                     </select>
                 </div>
 
-                <!-- survey 2 -->
+                <div class="formRow">
+                    <label for="dish">What's your favorite dish?</label>
+                    <input name="favDish" id="dish" type="text" list="dishType">
+                    <datalist id="dishType">
+                        <option value="Antipasto Pizza" />
+                        <option value="Big Kahuna Pizza" />
+                        <option value="BBQ Chicken Pizza" />
+                        <option value="Mediteranean Herb Pizza" />
+                        <option value="Pasta Rolls" />
+                        <option value="Pesto Artichoke Pizza" />
+                    </datalist>
 
+                </div>
+
+
+                <div class="formRow">
+                    <label for="dineSpin">How many times do you dine out per month?</label>
+                    <input type="number" name="dineOut" id="dineSpin" value="1" step="1" min="1" max="20">
+                </div>
+
+                <input type="checkbox" name="mailMe" id="mailCB" value="yes">
+                <label for="mailCB">Add me to your mailing list for great coupons and specials!!!</label>
             </fieldset>
+            <!-- survey 2 -->
+
             <fieldset id="expInfo">
                 <legend>Share Your Experience at Redball Pizaa</legend>
                 <div class="formRow">
@@ -160,10 +182,28 @@
                         <input type="radio" name="foodHot" id="cNes" value="Nes">
                     </fieldset>
                 </div>
+
+                <div class="formRow">
+                    <label for="rangeBox">Rate the overall service br
+                        (0=poor; 10=Great)</label>
+                    0
+                    <input type="range" name="serviceRate" id="rangeBox" value="5" step="1" min="0" max="10">
+                    10
+                </div>
+                <label for="commBox">Tell us more about your experience.</label>
+                <textarea name="custExp" id="commBox"></textarea>
+
             </fieldset>
+
+            <div id="buttons">
+                <input type="submit" value="Submit My Survey">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
 
 
     </section>
+
     <footer>
         <h1>ORDER</h1>
         <a href="#">Specials</a> <a href="#">Pizza</a> <a href="#">Pasta</a> <a href="#">Wings</a> <a href="#">Sides</a>
@@ -178,6 +218,7 @@
         <a href="#">Nutrition Information</a> <a href="#">Food Allergen</a> <a href="#">Gluten Free Pizza</a>
         <h1>POLICIES</h1>
         <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a>
+
         <address>
             Red Ball Pizza <br />
             811 Beach Drive <br />
