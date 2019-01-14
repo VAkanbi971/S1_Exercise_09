@@ -20,6 +20,7 @@
     <title>Red Ball Survey</title>
     <link href="rb_reset.css" rel="stylesheet" />
     <link href="rb_styles.css" rel="stylesheet" />
+    <script src="rb_formsubmit.js"></script>
     <link rel="stylesheet" href="rb_forms.css" />
 
 </head>
@@ -62,7 +63,7 @@
 
                 <div class="formRow">
                     <label for="name">Name</label>
-                    <input name="custName" id="name" type="text" placeholder="first and last name">
+                    <input name="custName" id="name" type="text" placeholder="first and last name" required>
                 </div>
 
                 <div class="formRow">
@@ -85,19 +86,19 @@
 
                 <div class="formRow">
                     <label for="zip">Zip</label>
-                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnnn)">
+                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnnn)" pattern="^\d{5}(-\d{4})?$">
                 </div>
 
 
                 <div class="formRow">
                     <label for="phone">Phone Number</label>
-                    <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn">
+                    <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
                 </div>
 
 
                 <div class="formRow">
                     <label for="email">Email</label>
-                    <input name="custEmail" id="email" type="email">
+                    <input name="custEmail" id="mail" type="email" required>
                 </div>
 
                 <div class="formRow">
